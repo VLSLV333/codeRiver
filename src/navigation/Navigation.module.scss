@@ -1,0 +1,61 @@
+//   imports Lending word font
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+//      li items font
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//      imports Buy word font
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+.nav {
+	max-width: 1351px;
+	background-color: #e1e3e9;
+	margin: 0 auto;
+	padding: 5rem 0 4.5rem 5rem;
+}
+.ulTop {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.125rem;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	& .landing {
+		font-family: 'Jomhuria', cursive;
+		font-size: 80px;
+		color: #2e3341;
+		flex-grow: 1;
+	}
+
+	& .nest {
+		flex-grow: 4;
+	}
+}
+
+.ulNest {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	position: relative;
+	top: 0.875rem;
+}
+
+.hero {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.125rem;
+	color: white;
+	transform: rotate(19.5deg);
+	position: relative;
+	bottom: 20px;
+	&::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		background-color: #f54329;
+		height: 106px;
+		width: 106px;
+		border-radius: 100px;
+		right: -25px;
+		top: -25px;
+		z-index: -1;
+	}
+}
