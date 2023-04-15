@@ -1,0 +1,30 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.slider {
+	display: flex;
+	gap: 2.4rem;
+	width: calc(100% - 10rem);
+	transition: transform 1s;
+}
+
+.slider img {
+	width: 239px;
+	height: 304px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+// .arr {
+// 	width: 5rem;
+// 	// background-color: red;
+// 	z-index: 3;
+// 	position: relative;
+// }
+// .leftArr {
+// 	// right: 20px;
+// }

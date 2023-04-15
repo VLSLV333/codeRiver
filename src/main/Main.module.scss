@@ -1,75 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-// @font-face {
-// 	font-family: photoText;
-// 	src: url(./peaceSans.otf);
-// }
-
-@font-face {
-	font-family: photoText;
-	src: url(./GaraginRockLite.otf);
-}
-
-.main {
+.foot {
 	max-width: 1351px;
 	background-color: #e1e3e9;
 	margin: 0 auto;
-	padding: 0rem 8rem 3rem 5rem;
-	word-wrap: break-word;
-	display: flex;
-	justify-content: space-between;
-}
-
-.firstContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.text {
-	font-family: 'Oswald', sans-serif;
-	font-size: 90px;
-	max-width: 600px;
-	font-weight: 500;
-	line-height: 105px;
-}
-
-.creat {
-	font-family: photoText;
-	background-image: url(./image.png);
-	// background-image: url(./pexels-vlad-alexandru-popa-1402787.jpg);
-	// background-size: cover;
-	// background-size: contain;
-	background-size: 100%;
-	background-clip: text;
-	// background-position: left 1.5% bottom 50%;
-	color: transparent;
-	font-size: 200px;
-	max-width: 478px;
-	line-height: 233px;
-	letter-spacing: -1px;
-}
-
-.hero {
-	display: inline-block;
-	transform: rotate(10.48deg);
-	position: relative;
-	left: 1.6rem;
-	&::after {
-		content: '';
-		display: inline-block;
-		position: absolute;
-		background-color: #bafd37;
-		border-radius: 9px;
-		height: 106px;
-		width: 202px;
-		z-index: -1;
-		left: -5px;
-		box-shadow: 1px 1px 5px gray;
+	padding: 0rem 5rem 8rem 5rem;
+	& h2 {
+		font-family: 'Oswald', sans-serif;
+		font-size: 60px;
+		padding: 3rem 0;
+		font-weight: 500;
+	}
+	& p {
+		font-family: 'Roboto', sans-serif;
+		text-align: start;
+		padding: 0 4rem 2rem;
 	}
 }
-
-.star {
-	position: absolute;
-	top: -30px;
+.news {
+	background-color: white;
+	text-align: center;
+	padding-bottom: 3rem;
+	border-radius: 6px;
+	box-shadow: 2px 3px 3px rgb(209, 209, 209);
+	position: relative;
 }
