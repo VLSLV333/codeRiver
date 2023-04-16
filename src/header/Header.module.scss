@@ -14,6 +14,7 @@
 	word-wrap: break-word;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 }
 
 .firstContainer {
@@ -28,11 +29,17 @@
 	max-width: 600px;
 	font-weight: 500;
 	line-height: 105px;
+	z-index: 1;
+	&:hover {
+		text-shadow: 2px 3px 3px rgb(150, 150, 150);
+	}
+	&:hover span {
+		text-shadow: none;
+	}
 }
 
 .creat {
 	font-family: photoText;
-	background-image: url(./image.png);
 	background-size: 100%;
 	background-clip: text;
 	color: transparent;
@@ -40,11 +47,41 @@
 	max-width: 478px;
 	line-height: 233px;
 	letter-spacing: -1px;
+	animation: show 0.8s ease-in forwards;
+	-webkit-animation: slidein 10s;
+	animation: slidein 10s;
+	z-index: 1;
+
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}
+@-webkit-keyframes slidein {
+	from {
+		background-position: 0px -715px;
+	}
+	to {
+		background-position: -478px 0px;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		background-position: 0px -715px;
+	}
+	100% {
+		background-position: -478px 0px;
+	}
 }
 
 .hero {
 	display: inline-block;
-	transform: rotate(10.48deg);
+	rotate: 10.48deg;
 	position: relative;
 	left: 1.6rem;
 	&::after {
@@ -64,4 +101,39 @@
 .star {
 	position: absolute;
 	top: -30px;
+}
+
+.photo {
+	position: absolute;
+	right: 9rem;
+	animation: hide 0.8s ease-in forwards;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.file {
+	opacity: 0;
+	width: 478px;
+	height: 700px;
+	position: absolute;
+	right: 9.4rem;
+	z-index: 5;
 }

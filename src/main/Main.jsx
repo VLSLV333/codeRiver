@@ -1,40 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import Galery from '../galery/Galery';
+import Galery from './galery/Galery';
 import ArrowLeft from './arrowLeft/ArrowLeft';
 import ArrowRight from './arrowRight/ArrowRight';
 
 import style from './Main.module.scss';
 
 const Footer = () => {
-	const [transform, setTransform] = useState(20);
+	const [clickLeft, setClickLeft] = useState(false);
+	const [clickRight, setClickRight] = useState(false);
 
 	const rightArrowHandler = () => {
-		setTransform((prevState) => {
-			if (prevState >= 20) {
-				return (prevState = 30.5);
-			} else {
-				return (prevState += 20);
-			}
-		});
+		setClickRight(true);
 	};
 
 	const leftArrowHandler = () => {
-		setTransform((prevState) => {
-			if (prevState <= 20) {
-				return 0;
-			} else {
-				return (prevState -= 20);
-			}
-		});
+		setClickLeft(true);
 	};
+
+	useEffect(() => {
+		setClickLeft(false);
+	}, [clickLeft]);
+
+	useEffect(() => {
+		setClickRight(false);
+	}, [clickRight]);
 
 	return (
 		<main className={style.foot}>
-			<div className={style.news}>
+			<div className={`${style.news} animate__animated animate__flipInX`}>
 				<h2>CHOOSE LOOKS</h2>
 				<ArrowLeft onClick={leftArrowHandler} />
-				<Galery move={transform} />
+				<Galery left={clickLeft} right={clickRight} />
 				<ArrowRight onClick={rightArrowHandler} />
 				<h2>MORE ABOUT US</h2>
 				<p>

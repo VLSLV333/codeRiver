@@ -1,0 +1,14 @@
+.sv {
+    animation: rotat 0.5s ease-in-out forwards;
+}
+@keyframes rotat {
+	0% {
+		transform: translateX(-50px);
+        opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+}

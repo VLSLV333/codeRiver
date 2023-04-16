@@ -1,0 +1,22 @@
+.icon {
+	width: 1350px;
+    position: absolute;
+    left: 0px;
+	& path {
+		fill: transparent;
+		stroke-width: 10;
+		stroke: #647ce9;
+		stroke-dasharray: 1910;
+		stroke-dashoffset: 0;
+		animation: animate-line 2s linear forwards;
+	}
+}
+
+@keyframes animate-line {
+    0% {
+		stroke-dashoffset: -1910;
+    }
+	100% {
+		stroke-dashoffset: -3820;
+	}
+}
