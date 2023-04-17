@@ -28,7 +28,7 @@ const Header = () => {
 		}
 	};
 	return (
-		<header className={style.main}>
+		<header className={style.header}>
 			<div className={style.firstContainer}>
 				<AppAvailable />
 				<BlueLine />
@@ -40,19 +40,21 @@ const Header = () => {
 					APPAREL
 				</h1>
 			</div>
-			<input
-				className={style.file}
-				type='file'
-				id='file'
-				onChange={handleImageUpload}
-			/>
-			<h2
-				className={style.creat}
-				style={{ backgroundImage: `url(${image || girlPhoto})` }}
-			>
-				CREATE
-			</h2>
-			<img className={style.photo} src={girlPhoto} alt='girl face' />
+			<div className={style.girlContainer}>
+				<input
+					className={style.file}
+					type='file'
+					id='file'
+					onChange={handleImageUpload}
+				/>
+				<h2
+					className={style.creat}
+					style={{ backgroundImage: `url(${image || girlPhoto})` }}
+				>
+					CREATE
+				</h2>
+				<img className={style.photo} src={girlPhoto} alt='girl face' />
+			</div>
 		</header>
 	);
 };

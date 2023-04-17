@@ -16,14 +16,14 @@ const Galery = ({ left, right }) => {
 	useEffect(() => {
 		if (box) {
 			let width = box.clientWidth;
-			box.scrollLeft = box.scrollLeft + width / 2;
+			box.scrollLeft = box.scrollLeft + width / 1.5;
 		}
 	}, [right, box]);
 
 	useEffect(() => {
 		if (box) {
 			let width = box.clientWidth;
-			box.scrollLeft = box.scrollLeft - width / 2;
+			box.scrollLeft = box.scrollLeft - width / 1.5;
 		}
 	}, [left, box]);
 

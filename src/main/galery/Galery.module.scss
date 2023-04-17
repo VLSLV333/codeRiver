@@ -9,13 +9,34 @@
 	scroll-behavior: smooth;
 	gap: 2.2rem;
 	margin: 0 auto;
+
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
 	& img {
 		width: 239px;
 		height: 304px;
 		object-fit: cover;
 		flex-shrink: 0;
+		scroll-snap-align: start;
 		&:hover {
 			transform: scale(1.1);
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.productContainer {
+		gap: 1.2rem;
+		& img {
+			width: 138px;
+			height: 177px;
 		}
 	}
 }

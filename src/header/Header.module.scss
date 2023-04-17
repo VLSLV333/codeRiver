@@ -6,15 +6,16 @@
 	src: url(./GaraginRockLite.otf);
 }
 
-.main {
+.header {
 	max-width: 1351px;
 	background-color: #e1e3e9;
-	margin: 0 auto;
+	margin: -1px auto;
 	padding: 0rem 9rem 3rem 5rem;
 	word-wrap: break-word;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	overflow: hidden;
 }
 
 .firstContainer {
@@ -36,6 +37,10 @@
 	&:hover span {
 		text-shadow: none;
 	}
+}
+
+.girlContainer {
+	position: relative;
 }
 
 .creat {
@@ -61,6 +66,21 @@
 	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
 }
+
+.file {
+	opacity: 0;
+	width: 478px;
+	height: 700px;
+	position: absolute;
+	z-index: 5;
+}
+
+.photo {
+	position: absolute;
+	top: 0;
+	animation: hide 0.8s ease-in forwards;
+}
+
 @-webkit-keyframes slidein {
 	from {
 		background-position: 0px -715px;
@@ -103,12 +123,6 @@
 	top: -30px;
 }
 
-.photo {
-	position: absolute;
-	right: 9rem;
-	animation: hide 0.8s ease-in forwards;
-}
-
 @keyframes hide {
 	0% {
 		opacity: 1;
@@ -129,11 +143,46 @@
 	}
 }
 
-.file {
-	opacity: 0;
-	width: 478px;
-	height: 700px;
-	position: absolute;
-	right: 9.4rem;
-	z-index: 5;
+@media screen and (max-width: 886px) {
+	.header {
+		align-items: center;
+		padding: 0rem 0rem 3rem;
+		flex-direction: column;
+	}
+	.text {
+		font-size: 54px;
+		text-align: center;
+		margin: 4rem 0rem;
+	}
+	.hero {
+		margin-right: 3rem;
+		&::after {
+			height: 79px;
+			width: 147px;
+			left: -10px;
+			bottom: 12px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header {
+		justify-content: center;
+		padding: 0rem 0rem 3rem;
+	}
+	.text {
+		font-size: 41px;
+		margin: 2rem 0rem 0rem;
+	}
+	.girlContainer{
+		display: none;
+	}
+	.hero {
+		&::after {
+			height: 65px;
+			width: 112px;
+			left: -13px;
+			bottom: 20px;
+		}
+	}
 }
